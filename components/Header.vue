@@ -21,7 +21,7 @@ const color = useColorMode()
       </ClientOnly>
 
       <nav>
-        <ul class="hidden items-center justify-between gap-[30px]">
+        <ul class="hidden items-center justify-between gap-[30px] lg:flex">
           <li v-for="item in menu" :key="item.href">
             <NuxtLink :to="item.href" class="hover-link-color">
               {{ item.label }}

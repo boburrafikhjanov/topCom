@@ -60,33 +60,56 @@ html.dark body {
 }
 
 .icon-sun {
-  -webkit-mask: url('/assets/icons/sun.svg');
-  mask: url('/assets/icons/sun.svg');
+  -webkit-mask: url('/assets/icons/sun.svg') no-repeat center center / 100%;
+  mask: url('/assets/icons/sun.svg') no-repeat center / 100%;
 }
 
 .icon-moon {
-  -webkit-mask: url('/assets/icons/moon.svg');
-  mask: url('/assets/icons/moon.svg');
+  -webkit-mask: url('/assets/icons/moon.svg') no-repeat center / 100%;
+  mask: url('/assets/icons/moon.svg') no-repeat center / 100%;
 }
 
 .icon-right-up {
-  -webkit-mask: url('/assets/icons/right-up.svg');
-  mask: url('/assets/icons/right-up.svg');
+  -webkit-mask: url('/assets/icons/right-up.svg') no-repeat center / 100%;
+  mask: url('/assets/icons/right-up.svg') no-repeat center / 100%;
 }
 
 .icon-star {
-  -webkit-mask: url('/assets/icons/star.svg');
-  mask: url('/assets/icons/star.svg');
+  -webkit-mask: url('/assets/icons/star.svg') no-repeat center / 100%;
+  mask: url('/assets/icons/star.svg') no-repeat center / 100%;
 }
 
 .icon-plus {
-  -webkit-mask: url('/assets/icons/plus.svg');
-  mask: url('/assets/icons/plus.svg');
+  -webkit-mask: url('/assets/icons/plus.svg') no-repeat center / 100%;
+  mask: url('/assets/icons/plus.svg') no-repeat center / 100%;
 }
 
 .icon-minus {
-  -webkit-mask: url('/assets/icons/minus.svg');
-  mask: url('/assets/icons/minus.svg');
+  -webkit-mask: url('/assets/icons/minus.svg') no-repeat center / 100%;
+  mask: url('/assets/icons/minus.svg') no-repeat center / 100%;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 2px;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 2px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 @media (min-width: 1440px) {

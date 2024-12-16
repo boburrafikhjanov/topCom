@@ -9,29 +9,38 @@ const color = useColorMode()
 <template>
   <footer class="mt-[30px] py-[40px] bg-[#e9e9e9] dark:bg-[#0C0C0C]">
     <div class="container">
-      <ClientOnly>
-        <NuxtLink class="max-w-[200px] flex flex-none mb-[50px]" to="/">
-          <img
-            v-if="color.value === 'dark'"
-            class="w-full"
-            :src="logoFooterDark"
-            alt="Company Logo - Dark Mode"
-          />
-          <img v-else :src="logoFooterLight" alt="Company Logo - Light Mode" />
-        </NuxtLink>
-      </ClientOnly>
+      <div class="lg:grid lg:grid-cols-4 lg:gap-[20px] py-[30px]">
+        <ClientOnly>
+          <NuxtLink
+            class="max-w-[200px] flex flex-none mb-[50px] lg:mb-auto"
+            to="/"
+          >
+            <img
+              v-if="color.value === 'dark'"
+              class="w-full"
+              :src="logoFooterDark"
+              alt="Company Logo - Dark Mode"
+            />
+            <img
+              v-else
+              :src="logoFooterLight"
+              alt="Company Logo - Light Mode"
+            />
+          </NuxtLink>
+        </ClientOnly>
 
-      <div v-for="(menu, key) in menuFooter" :key="key" class="mb-[40px]">
-        <div class="text-[#F53700] text-[24px] font-semibold mb-[30px]">
-          {{ menu.title }}
+        <div v-for="(menu, key) in menuFooter" :key="key" class="mb-[40px]">
+          <div class="text-[#F53700] text-[24px] font-semibold mb-[30px]">
+            {{ menu.title }}
+          </div>
+          <ul>
+            <li v-for="(item, i) in menu.menu" :key="i" class="mb-[16px]">
+              <NuxtLink class="text-[16px] font-medium" :to="item.href">
+                {{ item.label }}
+              </NuxtLink>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li v-for="(item, i) in menu.menu" :key="i" class="mb-[16px]">
-            <NuxtLink class="text-[16px] font-medium" :to="item.href">
-              {{ item.label }}
-            </NuxtLink>
-          </li>
-        </ul>
       </div>
     </div>
   </footer>
