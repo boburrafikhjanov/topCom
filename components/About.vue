@@ -4,58 +4,49 @@ import { Stars } from '~/constants/stars'
 </script>
 
 <template>
-  <section class="py-[30px] lg:py-[70px]">
+  <section class="py-[70px]">
     <div class="container">
       <h1
-        class="text-[30px] dark:text[#fff] font-bold mb-[16px] lg:text-[56px] lg:mb-[30px] leading-[normal]"
+        class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
       >
-        <span class="text-[#F53700]">/</span>About us
+        <span class="icon icon-about w-[100px] h-[100px] mr-[16px]"></span>About
+        us
       </h1>
 
-      <p
-        class="text-[12px] mb-[24px] lg:text-[24px] lg:mb-[70px] lg:max-w-[950px]"
-      >
+      <p class="text-[22px] mb-[70px] max-w-[950px]">
         We establish a strong DevOps culture that can lead to improved
         efficiency, faster time-to-market, and better collaboration between
         teams.
       </p>
 
-      <div
-        class="flex flex-col lg:flex-row lg:grid lg:grid-cols-4 lg:gap-[20px]"
-      >
-        <div
-          class="text-[18px] mb-[16px] lg:text-[40px] lg:mb-[0] lg:col-span-1 lg:font-bold"
-        >
-          Numbers
-        </div>
+      <div class="grid grid-cols-4 gap-[20px]">
+        <div class="text-[36px] col-span-1 font-bold">Numbers</div>
 
-        <div class="lg:col-span-3">
-          <div class="flex flex-col lg:flex-row lg:justify-between">
+        <div class="col-span-3">
+          <div class="flex flex-row justify-between">
             <div
               v-for="number in Numbers"
               :key="number.number"
-              class="flex flex-col items-center mb-[24px] lg:items-start w-full lg:max-w-[200px]"
+              class="flex flex-col mb-[24px] items-start w-full max-w-[200px]"
             >
-              <span
-                class="text-[32px] mb-[16px] font-bold leading-[normal] lg:text-[50px] lg:mb-[36px]"
-                >{{ number.number }}</span
-              >
-              <span class="text-[12px] leading-[normal] lg:text-[24px]">{{
-                number.description
+              <span class="text-[42px] mb-[20px] font-bold">{{
+                number.number
               }}</span>
+
+              <span class="text-[22px]">{{ number.description }}</span>
             </div>
           </div>
 
-          <hr class="border-[#1B1B1B] mb-[30px] lg:mb-[40px]" />
+          <hr class="border-[#EBEBEB] mb-[50px] mt-[24px]" />
 
-          <div class="mx-auto lg:m-0 lg:grid lg:grid-cols-2 lg:gap-x-[100px]">
+          <div class="grid grid-cols-2 gap-x-[100px]">
             <div
               v-for="star in Stars"
               :key="star.logo"
-              class="flex items-center max-w-[358px] w-full mb-[24px] lg:mb-[36px] lg:flex-row"
+              class="flex items-center max-w-[358px] w-full mb-[30px] flex-row"
             >
               <div
-                class="flex items-center justify-center text-center text-[12px] w-[70px] h-[70px] rounded-[50%] mr-[16px] bg-[#ebebeb] border-[#111111] dark:bg-[#1B1B1B] flex-none lg:w-[100px] lg:h-[100px] lg:mr-[24px] lg:text-[14px] lg:font-bold"
+                class="flex items-center justify-center text-center text-[12px] text-[white] font-bold w-[80px] h-[80px] rounded-[50%] mr-[16px] bg-[#1B1B1B] flex-none"
               >
                 {{ star.logo }}
               </div>
@@ -64,14 +55,13 @@ import { Stars } from '~/constants/stars'
                   <i
                     v-for="(stars, i) in star.stars"
                     :key="i"
-                    class="icon icon-star bg-[#F53700] w-[25px] h-[25px] mr-[5px] lg:w-[36px] lg:h-[36px] lg:mr-[8px]"
+                    class="icon icon-star bg-[#F53700] w-[28px] h-[28px] mr-[8px]"
                   ></i>
-                  <span
-                    class="text-[16px] text-[#525252] ml-[10px] lg:text-[24px] leading-[normal]"
-                    >{{ star.rate }}</span
-                  >
+                  <span class="text-[24px] text-[#525252] ml-[8px]">{{
+                    star.rate
+                  }}</span>
                 </div>
-                <div class="text-[16px] lg:text-[24px] leading-[normal]">
+                <div class="text-[24px]">
                   {{ star.reviews }}
                 </div>
               </div>

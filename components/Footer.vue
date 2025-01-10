@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import logoFooterDark from 'assets/icons/logoFooterDark.svg'
-import logoFooterLight from 'assets/icons/logoFooterLight.svg'
+import logoBlack from 'assets/icons/logo-black.svg'
+import logoWhite from 'assets/icons/logo-white.svg'
 import { menuFooter } from '~/constants/menuFooter'
 
 const color = useColorMode()
@@ -18,14 +18,10 @@ const color = useColorMode()
             <img
               v-if="color.value === 'dark'"
               class="w-full"
-              :src="logoFooterDark"
+              :src="logoWhite"
               alt="Company Logo - Dark Mode"
             />
-            <img
-              v-else
-              :src="logoFooterLight"
-              alt="Company Logo - Light Mode"
-            />
+            <img v-else :src="logoBlack" alt="Company Logo - Light Mode" />
           </NuxtLink>
         </ClientOnly>
 

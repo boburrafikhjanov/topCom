@@ -1,38 +1,7 @@
-@font-face {
-  font-family: 'Inter';
-  src:
-    url('../fonts/Inter-Regular.woff2') format('woff2'),
-    url('../fonts/Inter-Regular.woff') format('woff'),
-    url('../fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src:
-    url('../fonts/Inter-Medium.woff2') format('woff2'),
-    url('../fonts/Inter-Medium.woff') format('woff'),
-    url('../fonts/Inter-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src:
-    url('../fonts/Inter-Bold.woff2') format('woff2'),
-    url('../fonts/Inter-Bold.woff') format('woff'),
-    url('../fonts/Inter-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+@import '/assets/fonts/stylesheet.css';
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Aeonik TRIAL', sans-serif;
   color: #060607;
 }
 
@@ -46,11 +15,8 @@ html.dark body {
 }
 
 .container {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.hover-link-color:hover {
-  color: #ff3b00;
 }
 
 .icon {
@@ -89,6 +55,26 @@ html.dark body {
   mask: url('/assets/icons/minus.svg') no-repeat center / 100%;
 }
 
+.icon-service {
+  background: url('/public/img/service.png') no-repeat center / 100%;
+}
+
+.icon-about {
+  background: url('/public/img/star.png') no-repeat center / 100%;
+}
+
+.icon-trust {
+  background: url('/public/img/trust.png') no-repeat center / 100%;
+}
+
+.icon-reviews {
+  background: url('/public/img/reviews.png') no-repeat center / 100%;
+}
+
+.icon-phone {
+  background: url('/public/img/phone.png') no-repeat center / 100%;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 2px;
@@ -110,13 +96,6 @@ html.dark body {
 
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.05);
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 1024px) {

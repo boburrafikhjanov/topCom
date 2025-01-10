@@ -9,63 +9,58 @@ const toggleActive = (index: number) => {
 </script>
 
 <template>
-  <section class="py-[30px] lg:py-[70px]">
+  <section class="py-[70px]">
     <div class="container">
       <h1
-        class="text-[30px] dark:text-[#fff] font-bold mb-[30px] lg:text-[56px] lg:mb-[140px] leading-[normal]"
+        class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[70px] leading-[normal]"
       >
-        <span class="text-[#f53700]">/</span>Why trust us
+        <span class="icon icon-trust w-[100px] h-[100px] mr-[16px]"></span>Why
+        trust us
       </h1>
 
-      <div class="lg:grid lg:grid-cols-4">
-        <div
-          class="grid grid-cols-2 gap-[30px] mb-[40px] lg:grid-cols-1 lg:col-span-1 lg:gap-[55px]"
-        >
+      <div class="grid grid-cols-4">
+        <div class="grid grid-cols-1 col-span-1 gap-[50px]">
           <div v-for="(item, key) in trustUs" :key="key" class="flex flex-col">
-            <span
-              class="text-[40px] text-[#000] font-bold dark:text-[#fff] mb-[10px] leading-[normal] lg:text-[72px] lg:mb-[16px]"
-              >{{ item.number }}</span
-            >
-            <span
-              class="text-[14px] text-[#525252] leading-[normal] lg:text-[24px]"
-              >{{ item.text }}</span
-            >
+            <span class="leading-[normal] text-[64px] font-bold mb-[10px]">{{
+              item.number
+            }}</span>
+            <span class="text-[20px] text-[#525252] leading-[normal]">{{
+              item.text
+            }}</span>
           </div>
         </div>
 
-        <div class="lg:grid lg:grid-cols-2 col-span-3">
-          <div
-            v-for="(item, index) in trustInfo"
-            :key="index"
-            class="mb-[40px]"
-          >
+        <div class="grid grid-cols-2 col-span-3">
+          <div v-for="(item, index) in trustInfo" :key="index" class="relative">
             <div
-              class="flex items-center mb-[16px] cursor-pointer lg:items-start"
+              class="flex items-start mb-[20px] cursor-pointer"
               @click="toggleActive(index)"
             >
               <i
                 v-if="activeIndex === index"
-                class="icon icon-minus w-[24px] h-[24px] bg-[#F53700] mr-[20px] lg:w-[48px] lg:h-[48px] flex-none lg:mt-[10px]"
+                class="icon icon-minus w-[36px] h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
               ></i>
               <i
                 v-else
-                class="icon icon-plus w-[24px] h-[24px] bg-[#F53700] mr-[20px] lg:w-[48px] lg:h-[48px] flex-none lg:mt-[10px]"
+                class="icon icon-plus w-[36px] h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
               ></i>
               <span
-                class="text-[24px] text-[#000] font-bold dark:text-[#fff] lg:text-[48px] leading-[normal]"
+                class="text-[34px] text-[#000] font-bold dark:text-[#fff] leading-[normal]"
               >
                 {{ item.title }}
               </span>
             </div>
 
-            <ElCollapseTransition>
-              <div
-                v-show="activeIndex === index"
-                class="pl-[44px] text-[14px] leading-[normal] lg:text-[24px]"
-              >
-                {{ item.text }}
-              </div>
-            </ElCollapseTransition>
+            <div class="absolute w-[100%]">
+              <ElCollapseTransition>
+                <div
+                  v-show="activeIndex === index"
+                  class="pl-[57px] text-[20px] leading-[30px]"
+                >
+                  {{ item.text }}
+                </div>
+              </ElCollapseTransition>
+            </div>
           </div>
         </div>
       </div>

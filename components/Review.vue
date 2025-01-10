@@ -12,10 +12,12 @@ const activateReview = (id: number) => {
   <section class="py-[30px] lg:py-[70px]">
     <div class="container">
       <h1
-        class="text-[30px] dark:text[#fff] font-bold mb-[40px] lg:text-[56px] leading-[normal]"
+        class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[70px] leading-[normal]"
       >
-        <span class="text-[#F53700]">/</span>What clients think about our
-        software development company:
+        <span
+          class="icon icon-reviews w-[100px] h-[100px] mr-[16px] flex-none"
+        ></span>
+        What clients think about our software development company:
       </h1>
 
       <div class="lg:grid lg:grid-cols-4 lg:gap-[20px]">
@@ -68,7 +70,7 @@ const activateReview = (id: number) => {
               </div>
 
               <div
-                class="text-[20px] leading-[normal] lg:text-[40px] lg:font-bold"
+                class="text-[20px] leading-[150%] lg:text-[36px] lg:font-bold"
               >
                 {{ review.text }}
               </div>

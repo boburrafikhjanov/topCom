@@ -1,36 +1,39 @@
 <script setup lang="ts">
-import logoDark from 'assets/icons/logoDark.svg'
-import logoLight from '~/assets/icons/logoLight.svg'
+import logoDark from '~/assets/icons/logo-dark.svg'
+import logo from '~/assets/icons/logo.svg'
 import { menu } from '~/constants/menu'
 const color = useColorMode()
 </script>
 
 <template>
-  <div class="container">
-    <div class="flex items-center justify-between py-[20px] mb-[300px]">
-      <ClientOnly>
-        <NuxtLink class="max-w-[124px] flex flex-none mr-[30px]" to="/">
+  <header class="fixed top-0 left-0 right-0 z-[999]">
+    <div class="container">
+      <div class="flex items-center justify-between py-[30px]">
+        <NuxtLink class="flex flex-none h-[40px] w-[164px]" to="/">
           <img
             v-if="color.value === 'dark'"
             class="w-full"
             :src="logoDark"
             alt="Company Logo - Dark Mode"
           />
-          <img v-else :src="logoLight" alt="Company Logo - Light Mode" />
+          <img v-else :src="logo" alt="Company Logo - Light Mode" />
         </NuxtLink>
-      </ClientOnly>
 
-      <nav>
-        <ul class="hidden items-center justify-between gap-[30px] lg:flex">
-          <li v-for="item in menu" :key="item.href">
-            <NuxtLink :to="item.href" class="hover-link-color">
-              {{ item.label }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+          <ul class="flex items-center justify-between gap-[30px] lg:flex">
+            <li v-for="item in menu" :key="item.href">
+              <NuxtLink
+                :to="item.href"
+                class="hover:text-[#ff3b00] text-[20px]"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
 
-      <ToggleTheme />
+        <ToggleTheme />
+      </div>
     </div>
-  </div>
+  </header>
 </template>

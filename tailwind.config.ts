@@ -2,6 +2,9 @@
 export default {
   content: [],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {},
     screens: {
       sm: '640px',

@@ -6,21 +6,21 @@ interface IServices {
 
 export const services: IServices[] = [
   {
-    title: 'Classical Linux administration',
+    title: 'Classical Linux',
     description:
-      'Our permanent team of engineers offers initial project setup and round-the-clock support.',
+      'Our permanent team of engineers offers initial project setup and round-the-clock.',
     href: '/',
   },
   {
     title: 'DevOps as a service',
     description:
-      'Our services include infrastructure support, creating a developer-friendly environment, and implementing DevOps practices.',
+      'Our services include infrastructure support, creating a developer-friendly environment.',
     href: '/',
   },
   {
-    title: 'Standard Kubernetes Cluster',
+    title: 'Standard Kubernetes',
     description:
-      'We provide a fully-managed, secure and scalable Kubernetes environment with automatic upgrades, seamless integration, and 24/7 support to meet your application needs.',
+      'We provide a fully-managed, secure and scalable Kubernetes environment with automatic.',
     href: '/',
   },
   {
