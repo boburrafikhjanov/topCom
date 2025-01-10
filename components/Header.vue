@@ -16,7 +16,12 @@ const color = useColorMode()
             :src="logoDark"
             alt="Company Logo - Dark Mode"
           />
-          <img v-else :src="logo" alt="Company Logo - Light Mode" />
+          <img
+            v-else
+            class="w-full"
+            :src="logo"
+            alt="Company Logo - Light Mode"
+          />
         </NuxtLink>
 
         <nav>
