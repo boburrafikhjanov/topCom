@@ -3,6 +3,23 @@ import logoDark from '~/assets/icons/logo-dark.svg'
 import logo from '~/assets/icons/logo.svg'
 import { menu } from '~/constants/menu'
 const color = useColorMode()
+
+const header = ref<HTMLElement | null>(null)
+
+const handleScroll = () => {
+  if (header.value) {
+    if (window.scrollY > 100) {
+      header.value.classList.add('active')
+    } else {
+      header.value.classList.remove('active')
+    }
+  }
+}
+
+onMounted(() => {
+  header.value = document.querySelector('header')
+  window.addEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
@@ -24,8 +41,8 @@ const color = useColorMode()
           />
         </NuxtLink>
 
-        <nav>
-          <ul class="flex items-center justify-between gap-[30px] lg:flex">
+        <nav class="hidden lg:flex">
+          <ul class="flex items-center justify-between gap-[30px]">
             <li v-for="item in menu" :key="item.href">
               <NuxtLink
                 :to="item.href"
@@ -42,3 +59,14 @@ const color = useColorMode()
     </div>
   </header>
 </template>
+
+<style>
+header.active {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+html.dark header.active {
+  background-color: #000;
+}
+</style>
