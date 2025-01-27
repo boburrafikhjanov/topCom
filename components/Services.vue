@@ -13,7 +13,7 @@ import { services } from '~/constants/services'
           >Our services
         </h1>
 
-        <div class="grid grid-cols-4 gap-[20px]">
+        <div class="grid grid-cols-3 gap-[20px]">
           <NuxtLink
             v-for="service in services"
             :key="service.title"

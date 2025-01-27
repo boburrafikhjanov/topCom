@@ -2,6 +2,7 @@
 import logoDark from '~/assets/icons/logo-dark.svg'
 import logo from '~/assets/icons/logo.svg'
 import { menu } from '~/constants/menu'
+import LangSwitcher from '~/components/LangSwitcher.vue'
 const color = useColorMode()
 
 const header = ref<HTMLElement | null>(null)
@@ -25,7 +26,7 @@ onMounted(() => {
 <template>
   <header class="fixed top-0 left-0 right-0 z-[999]">
     <div class="container">
-      <div class="flex items-center justify-between py-[30px]">
+      <div class="flex items-center py-[30px]">
         <NuxtLink class="flex flex-none h-[40px] w-[164px]" to="/">
           <img
             v-if="color.value === 'dark'"
@@ -41,20 +42,21 @@ onMounted(() => {
           />
         </NuxtLink>
 
-        <nav class="hidden lg:flex">
+        <nav class="hidden lg:flex mx-auto">
           <ul class="flex items-center justify-between gap-[30px]">
             <li v-for="item in menu" :key="item.href">
               <NuxtLink
                 :to="item.href"
                 class="hover:text-[#ff3b00] text-[20px]"
               >
-                {{ item.label }}
+                {{ $t(item.label as string) }}
               </NuxtLink>
             </li>
           </ul>
         </nav>
 
         <ToggleTheme />
+        <LangSwitcher />
       </div>
     </div>
   </header>

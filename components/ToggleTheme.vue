@@ -27,6 +27,7 @@ onMounted(() => {
     inline-prompt
     :active-icon="Moon"
     :inactive-icon="Sunny"
+    class="ml-auto mr-[20px]"
     @change="toggleDark"
   />
 </template>

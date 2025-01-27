@@ -7,13 +7,14 @@ const color = useColorMode()
     <div class="container relative z-[10]">
       <div class="flex items-end">
         <h1 class="text-[125px] font-bold leading-[normal] max-w-[620px]">
-          OPEN SOURCE DATABASE
+          Top Com - Your 24/7 <br />
+          DevOps Partner
         </h1>
         <p class="text-[22px] leading-2 mb-[15px] ml-[60px] max-w-[415px]">
-          Our team provides you with access to a comprehensive suite of DevOps
-          tools and services, including continuous integration and delivery
-          (CI/CD), infrastructure automation, application monitoring, and
-          security testing.
+          We provide a full range of DevOps solutions to streamline your
+          workflows and accelerate your time-to-market. Our services encompass
+          CI/CD, infrastructure automation, comprehensive application
+          monitoring, and security hardening, all available 24/7
         </p>
       </div>
     </div>

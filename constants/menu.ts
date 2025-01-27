@@ -6,22 +6,22 @@ interface IMenu {
 export const menu: IMenu[] = [
   {
     href: '#about',
-    label: 'About',
+    label: 'about',
   },
   {
     href: '#services',
-    label: 'Services',
+    label: 'services',
   },
   {
     href: '#blog',
-    label: 'Blog',
+    label: 'blog',
   },
   {
     href: '#contacts',
-    label: 'Contacts',
+    label: 'contacts',
   },
   {
     href: '#supportCenter',
-    label: 'Support center',
+    label: 'supportCenter',
   },
 ]
