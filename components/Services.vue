@@ -3,7 +3,7 @@ import { services } from '~/constants/services'
 </script>
 
 <template>
-  <section class="py-[70px] relative z-10">
+  <section id="services" class="py-[70px] relative z-10">
     <div class="container">
       <div>
         <h1
@@ -30,7 +30,7 @@ import { services } from '~/constants/services'
               {{ service.title }}
             </div>
             <p
-              class="text-[16px] h-[60px] leading-[20px] text-[#919191] dark:text[#fff] mb-[20px] group-hover:text-black dark:group-hover:text-white"
+              class="text-[16px] leading-[20px] text-[#919191] dark:text[#fff] mb-[20px] group-hover:text-black dark:group-hover:text-white"
             >
               {{ service.description }}
             </p>

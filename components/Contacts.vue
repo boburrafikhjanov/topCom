@@ -1,5 +1,5 @@
 <template>
-  <section class="py-[70px]">
+  <section id="contacts" class="py-[70px]">
     <div class="container">
       <h1
         class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"

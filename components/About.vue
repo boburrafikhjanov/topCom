@@ -4,7 +4,7 @@ import { Stars } from '~/constants/stars'
 </script>
 
 <template>
-  <section class="py-[70px]">
+  <section id="about" class="py-[70px]">
     <div class="container">
       <h1
         class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
@@ -14,9 +14,14 @@ import { Stars } from '~/constants/stars'
       </h1>
 
       <p class="text-[22px] mb-[70px] max-w-[950px]">
-        We establish a strong DevOps culture that can lead to improved
-        efficiency, faster time-to-market, and better collaboration between
-        teams.
+        TopCom is IT outsourcing company specializing in DevOps solutions. With
+        a team of seasoned experts, we bring a global perspective to local
+        expertise. Our mission is to empower businesses by optimizing their IT
+        infrastructure and streamlining workflows through cutting-edge DevOps
+        practices. We pride ourselves on: A customer-first approach. Deep
+        technical expertise in DevOps and cloud computing. A commitment to
+        delivering measurable results. By choosing us, you’re partnering with a
+        company that values innovation, reliability, and excellence.
       </p>
 
       <div class="grid grid-cols-4 gap-[20px]">

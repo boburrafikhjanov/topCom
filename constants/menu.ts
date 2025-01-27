@@ -21,7 +21,7 @@ export const menu: IMenu[] = [
     label: 'contacts',
   },
   {
-    href: '#supportCenter',
+    href: '#contacts',
     label: 'supportCenter',
   },
 ]

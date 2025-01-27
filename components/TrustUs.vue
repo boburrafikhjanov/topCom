@@ -55,7 +55,7 @@ const toggleActive = (index: number) => {
               <ElCollapseTransition>
                 <div
                   v-show="activeIndex === index"
-                  class="pl-[57px] text-[20px] leading-[30px]"
+                  class="pl-[57px] text-[16px] leading-[24px]"
                 >
                   {{ item.text }}
                 </div>
