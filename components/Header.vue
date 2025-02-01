@@ -28,18 +28,20 @@ onMounted(() => {
     <div class="container">
       <div class="flex items-center py-[30px]">
         <NuxtLink class="flex flex-none h-[40px] w-[164px]" to="/">
-          <img
-            v-if="color.value === 'dark'"
-            class="w-full"
-            :src="logoDark"
-            alt="Company Logo - Dark Mode"
-          />
-          <img
-            v-else
-            class="w-full"
-            :src="logo"
-            alt="Company Logo - Light Mode"
-          />
+          <ClientOnly>
+            <img
+              v-if="color.value === 'dark'"
+              class="w-full"
+              :src="logoDark"
+              alt="Company Logo - Dark Mode"
+            />
+            <img
+              v-else-if="color.value === 'light'"
+              class="w-full"
+              :src="logo"
+              alt="Company Logo - Light Mode"
+            />
+          </ClientOnly>
         </NuxtLink>
 
         <nav class="hidden lg:flex mx-auto">

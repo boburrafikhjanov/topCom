@@ -3,17 +3,19 @@ import { services } from '~/constants/services'
 </script>
 
 <template>
-  <section id="services" class="py-[70px] relative z-10">
+  <section id="services" class="py-[30px] md:py-[70px] relative z-10">
     <div class="container">
       <div>
         <h1
-          class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
+          class="flex items-center text-[30px] md:text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
         >
-          <span class="icon icon-service w-[100px] h-[100px] mr-[16px]"></span
+          <span
+            class="icon icon-service w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
+          ></span
           >Our services
         </h1>
 
-        <div class="grid grid-cols-3 gap-[20px]">
+        <div class="md:grid grid-cols-3 gap-[20px]">
           <NuxtLink
             v-for="service in services"
             :key="service.title"

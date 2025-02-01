@@ -9,15 +9,15 @@ const activateReview = (id: number) => {
 </script>
 
 <template>
-  <section class="py-[30px] lg:py-[70px]">
+  <section class="py-[30px] md:py-[70px]">
     <div class="container">
       <h1
-        class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[70px] leading-[normal]"
+        class="flex items-center text-[30px] md:text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
       >
         <span
-          class="icon icon-reviews w-[100px] h-[100px] mr-[16px] flex-none"
-        ></span>
-        What clients think about our software development company:
+          class="icon icon-reviews flex-none w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
+        ></span
+        >What clients think about our software development company:
       </h1>
 
       <div class="lg:grid lg:grid-cols-4 lg:gap-[20px]">

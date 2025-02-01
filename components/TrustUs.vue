@@ -9,28 +9,33 @@ const toggleActive = (index: number) => {
 </script>
 
 <template>
-  <section class="py-[70px]">
+  <section class="py-[30px] md:py-[70px]">
     <div class="container">
       <h1
-        class="flex items-center text-[50px] dark:text[#fff] font-bold mb-[70px] leading-[normal]"
+        class="flex items-center text-[30px] md:text-[50px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
       >
-        <span class="icon icon-trust w-[100px] h-[100px] mr-[16px]"></span>Why
-        trust us
+        <span
+          class="icon icon-trust w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
+        ></span
+        >Why trust us
       </h1>
 
-      <div class="grid grid-cols-4">
-        <div class="grid grid-cols-1 col-span-1 gap-[50px]">
+      <div class="grid grid-cols-1 md:grid-cols-4">
+        <div
+          class="grid grid-cols-2 gap-[30px] md:grid-cols-1 md:col-span-1 md:gap-[50px] mb-[40px]"
+        >
           <div v-for="(item, key) in trustUs" :key="key" class="flex flex-col">
-            <span class="leading-[normal] text-[64px] font-bold mb-[10px]">{{
-              item.number
-            }}</span>
+            <span
+              class="leading-[normal] text-[40px] md:text-[64px] font-bold mb-[10px]"
+              >{{ item.number }}</span
+            >
             <span class="text-[20px] text-[#525252] leading-[normal]">{{
               item.text
             }}</span>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 col-span-3">
+        <div class="grid md:grid-cols-2 col-span-3">
           <div v-for="(item, index) in trustInfo" :key="index" class="relative">
             <div
               class="flex items-start mb-[20px] cursor-pointer"
@@ -38,20 +43,20 @@ const toggleActive = (index: number) => {
             >
               <i
                 v-if="activeIndex === index"
-                class="icon icon-minus w-[36px] h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
+                class="icon icon-minus w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
               ></i>
               <i
                 v-else
-                class="icon icon-plus w-[36px] h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
+                class="icon icon-plus w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-[#F53700] mr-[20px] flex-none mt-[3px]"
               ></i>
               <span
-                class="text-[34px] text-[#000] font-bold dark:text-[#fff] leading-[normal]"
+                class="text-[24px] md:text-[34px] text-[#000] font-bold dark:text-[#fff] leading-[normal]"
               >
                 {{ item.title }}
               </span>
             </div>
 
-            <div class="absolute w-[100%]">
+            <div class="md:absolute w-[100%] mb-[20px]">
               <ElCollapseTransition>
                 <div
                   v-show="activeIndex === index"
