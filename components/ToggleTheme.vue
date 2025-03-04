@@ -18,7 +18,7 @@ function toggleDark() {
 }
 
 onMounted(() => {
-  themeValue.value = localStorage.getItem('nuxt-color-mode') === 'dark'
+  themeValue.value = color.value === 'dark'
 })
 </script>
 <template>
