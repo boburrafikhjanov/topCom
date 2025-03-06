@@ -12,27 +12,23 @@ interface IServicesInfo {
 
 export const services: IServices[] = [
   {
-    title: 'Cloud',
-    description:
-      'Cloud strategy, Cloud adoption, Cloud operations, Cloud Security, Cloud accelerators, Cloud migration',
+    title: 'sectionServices.cloudTechnologies',
+    description: 'sectionServices.cloudDesc',
     href: '/services/cloud',
   },
   {
-    title: 'Infrastructure Automation & Orchestration',
-    description:
-      'Infrastructure as code (IaC) Faster resources provisioning and configuration Automating routine tasks Infrastructure and environment consistency GitOps Reduce IT overhead and management costs',
+    title: 'sectionServices.infrastructure',
+    description: 'sectionServices.infrastructureDesc',
     href: '/services/infrastructure',
   },
   {
-    title: 'Continuous Integration & Continuous Delivery',
-    description:
-      'Set up and manage CI/CD pipelines to automate the build, test, and deployment processes. Faster delivery of high-quality software releases with minimal manual intervention. Improve the quality of deliverable services and applications',
+    title: 'sectionServices.ci/cd',
+    description: 'sectionServices.ci/cdDesc',
     href: '/services/ci-cd',
   },
   {
-    title: 'Monitoring, Logging, Alerting',
-    description:
-      'Design logging and monitoring systems Adopt organization-wide logging and monitoring policies Full visibility into infrastructure components and applications Monitoring, analysis, forecast, alerting, and incident management Prevent services downtime',
+    title: 'sectionServices.monitoring',
+    description: 'sectionServices.monitoringDesc',
     href: '/services/monitoring',
   },
   {

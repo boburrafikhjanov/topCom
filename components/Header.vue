@@ -5,6 +5,8 @@ import { menu } from '~/constants/menu'
 import LangSwitcher from '~/components/LangSwitcher.vue'
 const color = useColorMode()
 
+const { t } = useI18n()
+
 const header = ref<HTMLElement | null>(null)
 
 const handleScroll = () => {
@@ -51,7 +53,7 @@ onMounted(() => {
                 :to="item.href"
                 class="hover:text-[#ff3b00] text-[20px]"
               >
-                {{ $t(item.label as string) }}
+                {{ t(item.label as string) }}
               </NuxtLink>
             </li>
           </ul>

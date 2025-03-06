@@ -3,5 +3,16 @@
   "services": "Services",
   "blog": "Blog",
   "contacts": "Contacts",
-  "supportCenter": "Support Center"
+  "supportCenter": "Support Center",
+  "learnMore": "Learn More",
+  "sectionServices": {
+    "cloudTechnologies": "Cloud",
+    "cloudDesc": "Cloud strategy, Cloud adoption, Cloud operations, Cloud Security, Cloud accelerators, Cloud migration",
+    "infrastructure": "Infrastructure Automation & Orchestration",
+    "infrastructureDesc": "Infrastructure as code (IaC) Faster resources provisioning and configuration Automating routine tasks Infrastructure and environment consistency GitOps Reduce IT overhead and management costs",
+    "ci/cd": "Continuous Integration & Continuous Delivery",
+    "ci/cdDesc": "Set up and manage CI/CD pipelines to automate the build, test, and deployment processes. Faster delivery of high-quality software releases with minimal manual intervention. Improve the quality of deliverable services and applications",
+    "monitoring": "Monitoring, Logging, Alerting",
+    "monitoringDesc": "Design logging and monitoring systems Adopt organization-wide logging and monitoring policies Full visibility into infrastructure components and applications Monitoring, analysis, forecast, alerting, and incident management Prevent services downtime"
+  }
 }
