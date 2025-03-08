@@ -7,7 +7,8 @@ interface IServices {
 interface IServicesInfo {
   id: string
   title: string
-  description: string
+  descriptionEn: string
+  descriptionRu: string
 }
 
 export const services: IServices[] = [
@@ -32,15 +33,13 @@ export const services: IServices[] = [
     href: '/services/monitoring',
   },
   {
-    title: 'Virtualization & Containerization',
-    description:
-      'Reduce workload Improve hardware utilization Portability and flexibility Improved security and isolation Ensure resource efficiency Deploy applications faster and more securely',
+    title: 'sectionServices.virtualization',
+    description: 'sectionServices.virtualizationDesc',
     href: '/services/virtualization',
   },
   {
-    title: 'Security & Audit',
-    description:
-      'Static application security testing Dynamic application security testing Interactive application security testing Software composition analysis Static code analysis Vulnerability scanning',
+    title: 'sectionServices.security',
+    description: 'sectionServices.securityDesc',
     href: '/services/security',
   },
 ]
@@ -48,8 +47,8 @@ export const services: IServices[] = [
 export const servicesInfo: IServicesInfo[] = [
   {
     id: 'cloud',
-    title: 'Cloud Services',
-    description: `<ul>
+    title: 'detailService.cloudServices',
+    descriptionEn: `<ul>
       <li>
         1. Cloud Strategy
         Develop a tailored roadmap to align cloud adoption with your business goals.
@@ -86,12 +85,49 @@ export const servicesInfo: IServicesInfo[] = [
         Minimize downtime with careful planning and risk mitigation strategies.
       </li>
     </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Стратегия облака
+        Разработка индивидуальной стратегии внедрения облачных технологий под бизнес-задачи
+        Оценка текущей инфраструктуры и подбор оптимальных облачных решений
+      </li>
+
+      <li>
+        2. Внедрение облачных решений
+        Плавный переход в облако с минимальными рисками
+        Обучение команд работе с облачными сервисами и инструментами.
+      </li>
+
+      <li>
+        3. Облачные операции
+        Управление облачной инфраструктурой для обеспечения высокой производительности
+        Автоматизация рутинных задач
+      </li>
+
+      <li>
+        4. Безопасность облака
+        Защита облачной инфраструктуры: управление доступами, шифрование, мониторинг
+        Соответствие стандартам GDPR, ISO 27001, SOC 2 и др.
+      </li>
+
+      <li>
+        5. Облачные акселераторы
+        Использование готовых решений для ускорения внедрения облачных технологий
+        Оптимизация облачных процессов с помощью передовых инструментов
+      </li>
+
+      <li>
+        6. Миграция в облако
+        Бесшовный перенос рабочих нагрузок и приложений в облако
+        Минимизация простоев благодаря детальному планированию и управлению рисками
+      </li>
+    </ul>`,
   },
 
   {
     id: 'infrastructure',
-    title: 'Infrastructure Automation & Orchestration',
-    description: `<ul>
+    title: 'detailService.infrastructure',
+    descriptionEn: `<ul>
       <li>
         1. Infrastructure as Code (IaC)
         Use tools like Terraform and Ansible to automate provisioning and manage infrastructure as code.
@@ -128,12 +164,47 @@ export const servicesInfo: IServicesInfo[] = [
         Achieve significant cost savings through efficient resource utilization.
       </li>
     </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Инфраструктура как код (IaC)
+        Автоматизированное управление инфраструктурой с помощью Terraform, Ansible и др.
+        Обеспечение единого стандарта для всех сред (Dev, Staging, Prod)
+      </li>
+
+      <li>
+        2. Быстрое развертывание ресурсов
+        Ускорение настройки новых сред для соответствия бизнес-требованиям
+      </li>
+
+      <li>
+        3. Автоматизация рутинных задач
+        Устранение ручных операций с помощью автоматизированных процессов.
+      </li>
+
+      <li>
+        4. Консистентность инфраструктуры
+        Стандартизация конфигураций для снижения ошибок.
+        Упрощение отладки и устранения неисправностей.
+      </li>
+
+      <li>
+        5. GitOps
+        Управление инфраструктурой через Git-репозитории
+        Упрощенное взаимодействие и контроль версий
+      </li>
+
+      <li>
+        6. Оптимизация затрат на IT
+        Автоматизация процессов для снижения административных расходов.
+        Эффективное использование ресурсов для снижения затрат.
+      </li>
+    </ul>`,
   },
 
   {
     id: 'ci-cd',
-    title: 'Continuous Integration & Continuous Delivery (CI/CD)',
-    description: `<ul>
+    title: 'detailService.ci/cd',
+    descriptionEn: `<ul>
       <li>
         1. Setup and Management
         Design, implement, and manage CI/CD pipelines to automate build, test, and deployment processes.
@@ -151,12 +222,28 @@ export const servicesInfo: IServicesInfo[] = [
         Enhance customer satisfaction with dependable and feature-rich applications.
       </li>
     </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Настройка и управление CI/CD
+        Автоматизация сборки, тестирования и развертывания
+      </li>
+
+      <li>
+        2. Быстрая доставка ПО
+        Ускорение вывода обновлений с высокой надежностью
+      </li>
+
+      <li>
+        3. Улучшение качества приложений
+        Раннее выявление ошибок за счет автоматизированного тестирования
+      </li>
+    </ul>`,
   },
 
   {
     id: 'monitoring',
-    title: 'Monitoring, Logging, and Alerting',
-    description: `<ul>
+    title: 'detailService.monitoring',
+    descriptionEn: `<ul>
       <li>
         1. Design Logging and Monitoring Systems
         Build robust systems to track application and infrastructure performance.
@@ -181,12 +268,33 @@ export const servicesInfo: IServicesInfo[] = [
         Prevent service downtime with predictive analysis and forecasting.
       </li>
     </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Разработка мониторинговых систем
+        Использование Prometheus, Grafana, ELK Stack и др.
+      </li>
+
+      <li>
+        2. Внедрение единых стандартов
+        Централизованная политика логирования и мониторинга
+      </li>
+
+      <li>
+        3. Полная прозрачность инфраструктуры
+       Глубокая аналитика и мониторинг работы систем
+      </li>
+      
+      <li>
+        4. Интеллектуальное оповещение и управление инцидентами
+        Настройка предиктивного анализа и алертов для предотвращения сбоев
+      </li>
+    </ul>`,
   },
 
   {
     id: 'virtualization',
-    title: 'Virtualization & Containerization',
-    description: `<ul>
+    title: 'detailService.virtualization',
+    descriptionEn: `<ul>
       <li>
         1. Kubernetes Cluster Management
         Design, deploy, and manage Kubernetes clusters for efficient container orchestration.
@@ -229,12 +337,38 @@ export const servicesInfo: IServicesInfo[] = [
         Accelerate deployment timelines using Docker and Kubernetes while maintaining high security and reliability.
       </li>
     </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Управление кластерами Kubernetes
+        Разработка, развертывание и поддержка кластеров Kubernetes
+      </li>
+
+      <li>
+        2. Docker-контейнеризация
+        Портативность и изоляция приложений для высокой надежности
+      </li>
+
+      <li>
+        3. Оптимизация аппаратных ресурсов
+        Максимизация эффективности использования серверов
+      </li>
+      
+      <li>
+        4. Гибкость и масштабируемость
+        Развертывание в облаке, на локальных серверах и в гибридных средах
+      </li>
+      
+      <li>
+        5. Улучшенная безопасность
+        Изоляция контейнеров и снижение рисков утечек данных
+      </li>
+    </ul>`,
   },
 
   {
     id: 'security',
-    title: 'Security & Audit',
-    description: `<ul>
+    title: 'detailService.security',
+    descriptionEn: `<ul>
       <li>
         1. Static Application Security Testing (SAST)
         Identify vulnerabilities in source code during development.
@@ -266,6 +400,27 @@ export const servicesInfo: IServicesInfo[] = [
         6. Vulnerability Scanning
         Regularly scan applications and infrastructure to uncover security risks.
         Provide actionable insights to mitigate threats effectively.
+      </li>
+    </ul>`,
+    descriptionRu: `<ul>
+      <li>
+        1. Анализ безопасности кода (SAST, DAST, IAST)
+        Поиск уязвимостей на разных этапах разработки
+      </li>
+
+      <li>
+        2. Анализ состава ПО (SCA)
+        Проверка сторонних компонентов на наличие уязвимостей
+      </li>
+
+      <li>
+        3. Статический анализ кода
+        Автоматическая проверка качества кода
+      </li>
+      
+      <li>
+        4. Поиск уязвимостей
+        Регулярный аудит приложений и инфраструктуры
       </li>
     </ul>`,
   },

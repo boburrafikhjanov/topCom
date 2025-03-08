@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { services } from '~/constants/services'
-
+const localePath = useLocalePath()
 const { locale, t } = useI18n()
 </script>
 
@@ -23,7 +23,7 @@ const { locale, t } = useI18n()
           <NuxtLink
             v-for="service in services"
             :key="service.title"
-            :to="service.href"
+            :to="localePath(service.href)"
             class="text-center rounded-[16px] p-[24px] group"
           >
             <div

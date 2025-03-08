@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Numbers } from '~/constants/numbers'
 import { Stars } from '~/constants/stars'
+const { locale, t } = useI18n()
 </script>
 
 <template>
@@ -11,11 +12,14 @@ import { Stars } from '~/constants/stars'
       >
         <span
           class="icon icon-about w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
-        ></span
-        >About us
+        ></span>
+        {{ t('aboutUs') }}
       </h1>
 
-      <p class="text-[16px] md:text-[22px] mb-[70px] max-w-[950px]">
+      <p
+        v-if="locale === 'en'"
+        class="text-[16px] md:text-[22px] mb-[70px] max-w-[950px]"
+      >
         TopCom is IT outsourcing company specializing in DevOps solutions. With
         a team of seasoned experts, we bring a global perspective to local
         expertise. Our mission is to empower businesses by optimizing their IT
@@ -24,6 +28,42 @@ import { Stars } from '~/constants/stars'
         technical expertise in DevOps and cloud computing. A commitment to
         delivering measurable results. By choosing us, you’re partnering with a
         company that values innovation, reliability, and excellence.
+      </p>
+
+      <p
+        v-if="locale === 'ru'"
+        class="text-[16px] md:text-[22px] max-w-[950px]"
+      >
+        TopCom — это IT-аутсорсинговая компания, специализирующаяся на
+        DevOps-решениях. Мы объединяем международный опыт и локальную
+        экспертизу, помогая бизнесу оптимизировать ИТ-инфраструктуру и ускорять
+        процессы с помощью передовых DevOps-практик.
+      </p>
+
+      <br />
+
+      <p
+        v-if="locale === 'ru'"
+        class="text-[16px] md:text-[16px] max-w-[950px]"
+      >
+        <b>Мы помогаем бизнесу:</b> <br />
+        Оптимизировать IT-инфраструктуру Ускорять выпуск продуктов Повышать
+        безопасность и надежность систем
+      </p>
+
+      <br />
+
+      <p
+        v-if="locale === 'ru'"
+        class="text-[16px] md:text-[16px] mb-[70px] max-w-[950px]"
+      >
+        <b>Наши принципы:</b> <br />
+        Клиентоориентированность – Мы подстраиваем решения под ваш бизнес.
+        Глубокая техническая экспертиза – Работаем с ведущими
+        DevOps-инструментами и облачными технологиями. Измеримые результаты –
+        Все наши решения направлены на повышение эффективности бизнеса. Выбирая
+        нас, вы сотрудничаете с командой, которая ценит инновации, надежность и
+        качество.
       </p>
 
       <div class="grid md:grid-cols-4 gap-[20px]">

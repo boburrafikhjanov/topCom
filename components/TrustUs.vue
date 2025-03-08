@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { trustUs, trustInfo } from '~/constants/trustUs'
-
+const { locale, t } = useI18n()
 const activeIndex = ref<number | null>(null)
 
 const toggleActive = (index: number) => {
@@ -16,22 +16,66 @@ const toggleActive = (index: number) => {
       >
         <span
           class="icon icon-trust w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
-        ></span
-        >Why trust us
+        ></span>
+        {{ t('trustUs') }}
       </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-4">
         <div
           class="grid grid-cols-2 gap-[30px] md:grid-cols-1 md:col-span-1 md:gap-[50px] mb-[40px]"
         >
-          <div v-for="(item, key) in trustUs" :key="key" class="flex flex-col">
+          <div class="flex flex-col">
             <span
               class="leading-[normal] text-[40px] md:text-[64px] font-bold mb-[10px]"
-              >{{ item.number }}</span
+              >5+</span
             >
-            <span class="text-[20px] text-[#525252] leading-[normal]">{{
-              item.text
-            }}</span>
+            <span
+              v-if="locale === 'en'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+            >
+              years of experience
+            </span>
+
+            <span
+              v-else-if="locale === 'ru'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+            >
+              лет опыта
+            </span>
+          </div>
+
+          <div class="flex flex-col">
+            <span
+              class="leading-[normal] text-[40px] md:text-[64px] font-bold mb-[10px]"
+              >1 500+</span
+            >
+            <span
+              v-if="locale === 'en'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+              >tasks delivered</span
+            >
+            <span
+              v-if="locale === 'ru'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+              >выполненных задач</span
+            >
+          </div>
+
+          <div class="flex flex-col">
+            <span
+              class="leading-[normal] text-[40px] md:text-[64px] font-bold mb-[10px]"
+              >70+</span
+            >
+            <span
+              v-if="locale === 'en'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+              >projects nailed</span
+            >
+            <span
+              v-if="locale === 'ru'"
+              class="text-[20px] text-[#525252] leading-[normal]"
+              >успешно реализованных проектов</span
+            >
           </div>
         </div>
 
@@ -52,7 +96,7 @@ const toggleActive = (index: number) => {
               <span
                 class="text-[24px] md:text-[34px] text-[#000] font-bold dark:text-[#fff] leading-[normal]"
               >
-                {{ item.title }}
+                {{ t(item.title) }}
               </span>
             </div>
 
@@ -62,7 +106,7 @@ const toggleActive = (index: number) => {
                   v-show="activeIndex === index"
                   class="pl-[57px] text-[16px] leading-[24px]"
                 >
-                  {{ item.text }}
+                  {{ t(item.text) }}
                 </div>
               </ElCollapseTransition>
             </div>

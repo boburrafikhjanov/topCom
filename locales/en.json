@@ -5,6 +5,8 @@
   "contacts": "Contacts",
   "supportCenter": "Support Center",
   "learnMore": "Learn More",
+  "aboutUs": "About us",
+  "trustUs": "Why trust us?",
   "sectionServices": {
     "cloudTechnologies": "Cloud",
     "cloudDesc": "Cloud strategy, Cloud adoption, Cloud operations, Cloud Security, Cloud accelerators, Cloud migration",
@@ -13,6 +15,28 @@
     "ci/cd": "Continuous Integration & Continuous Delivery",
     "ci/cdDesc": "Set up and manage CI/CD pipelines to automate the build, test, and deployment processes. Faster delivery of high-quality software releases with minimal manual intervention. Improve the quality of deliverable services and applications",
     "monitoring": "Monitoring, Logging, Alerting",
-    "monitoringDesc": "Design logging and monitoring systems Adopt organization-wide logging and monitoring policies Full visibility into infrastructure components and applications Monitoring, analysis, forecast, alerting, and incident management Prevent services downtime"
+    "monitoringDesc": "Design logging and monitoring systems Adopt organization-wide logging and monitoring policies Full visibility into infrastructure components and applications Monitoring, analysis, forecast, alerting, and incident management Prevent services downtime",
+    "virtualization": "Virtualization & Containerization",
+    "virtualizationDesc": "Reduce workload Improve hardware utilization Portability and flexibility Improved security and isolation Ensure resource efficiency Deploy applications faster and more securely",
+    "security": "Security & Audit",
+    "securityDesc": "Static application security testing Dynamic application security testing Interactive application security testing Software composition analysis Static code analysis Vulnerability scanning"
+  },
+  "detailService": {
+    "cloudServices": "Cloud Services",
+    "infrastructure": "Infrastructure Automation & Orchestration",
+    "ci/cd": "Continuous Integration & Continuous Delivery (CI/CD)",
+    "monitoring": "Monitoring, Logging, and Alerting",
+    "virtualization": " Virtualization & Containerization",
+    "security": "Security & Audit"
+  },
+  "trustInfo": {
+    "expertTeam": "Expert Team",
+    "expertTeamDesc": "Our engineers bring a wealth of international experience and certifications in top DevOps tools and methodologies. They have successfully executed projects for businesses across industries, ensuring seamless infrastructure and process optimization.",
+    "focus": "Focus on Business Requirements",
+    "focusDesc": "We understand that every business is unique. That’s why we tailor our solutions to meet your specific goals, whether it’s reducing costs, improving deployment speed, or enhancing system reliability. Your business success drives our approach.",
+    "support": "Continuous Support",
+    "supportDesc": "Our dedicated support team is available 24/7 to address any issues and ensure uninterrupted operations. From resolving incidents to proactive monitoring, we’re committed to keeping your systems running smoothly.",
+    "transparent": "Transparent Processes",
+    "transparentDesc": "We believe in clear communication and accountability. You’ll receive regular updates, detailed progress reports, and direct access to our team. This ensures you remain informed and in control at every step of the project."
   }
 }

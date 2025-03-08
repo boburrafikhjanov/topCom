@@ -5,6 +5,8 @@ definePageMeta({
   layout: 'default',
 })
 
+const { locale, t } = useI18n()
+
 const route = useRoute()
 const service = computed(() =>
   servicesInfo.find((item) => item.id === route.params.id)
@@ -18,10 +20,19 @@ const service = computed(() =>
         <h1
           class="text-center text-[36px] dark:text[#fff] font-bold mb-[30px] leading-[normal]"
         >
-          {{ service.title }}
+          {{ t(service.title) }}
         </h1>
 
-        <div class="text-[22px]" v-html="service.description"></div>
+        <div
+          class="text-[22px]"
+          v-html="
+            locale === 'en'
+              ? service.descriptionEn
+              : locale === 'ru'
+                ? service.descriptionRu
+                : null
+          "
+        ></div>
       </div>
       <div v-else>
         <p>Service not found.</p>

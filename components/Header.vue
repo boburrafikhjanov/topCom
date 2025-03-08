@@ -3,6 +3,8 @@ import logoDark from '~/assets/icons/logo-dark.svg'
 import logo from '~/assets/icons/logo.svg'
 import { menu } from '~/constants/menu'
 import LangSwitcher from '~/components/LangSwitcher.vue'
+const localePath = useLocalePath()
+
 const color = useColorMode()
 
 const { t } = useI18n()
@@ -29,7 +31,10 @@ onMounted(() => {
   <header class="fixed top-0 left-0 right-0 z-[999]">
     <div class="container">
       <div class="flex items-center py-[30px]">
-        <NuxtLink class="flex flex-none h-[40px] w-[164px]" to="/">
+        <NuxtLink
+          class="flex flex-none h-[40px] w-[164px]"
+          :to="localePath('/')"
+        >
           <ClientOnly>
             <img
               v-if="color.value === 'dark'"
