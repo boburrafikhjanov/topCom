@@ -52,7 +52,7 @@ export const menuFooter: IMenuFooter[] = [
     title: 'Contacts',
     menu: [
       {
-        href: '',
+        href: ' ',
         label:
           'Office 922, Blue Bay Tower, Business Bay, Dubai, United Arab Emirates',
       },
