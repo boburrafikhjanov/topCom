@@ -48,13 +48,13 @@ const { locale } = useI18n()
     <ClientOnly>
       <img
         v-if="color.value === 'light' && isLargeScreen"
-        class="absolute top-0 left-0"
+        class="absolute top-0 left-0 w-full"
         src="/img/hero_banner_bg.svg"
         alt=""
       />
       <img
         v-else-if="color.value === 'dark' && isLargeScreen"
-        class="absolute top-0 left-0"
+        class="absolute top-0 left-0 w-full"
         src="/img/hero_banner_bg_dark.svg"
         alt=""
       />

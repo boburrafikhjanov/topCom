@@ -52,8 +52,13 @@ export const menuFooter: IMenuFooter[] = [
     title: 'Contacts',
     menu: [
       {
-        href: '+998 77 077 077 3',
-        label: '+998 77 077 077 3',
+        href: '',
+        label:
+          'Office 922, Blue Bay Tower, Business Bay, Dubai, United Arab Emirates',
+      },
+      {
+        href: '+971 52 392 1010',
+        label: '+971 52 392 1010',
       },
       {
         href: 'info@topcom.com',

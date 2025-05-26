@@ -6,6 +6,8 @@ const activeReviewId = ref<number | null>(0)
 const activateReview = (id: number) => {
   activeReviewId.value = id
 }
+
+const { locale } = useI18n()
 </script>
 
 <template>
@@ -16,8 +18,9 @@ const activateReview = (id: number) => {
       >
         <span
           class="icon icon-reviews flex-none w-[50px] h-[50px] mr-[8px] md:w-[100px] md:h-[100px] md:mr-[16px]"
-        ></span
-        >What clients think about our software development company:
+        ></span>
+        <span v-if="locale === 'en'">Our Clients feedback:</span>
+        <span v-else-if="locale === 'ru'">Отзывы наших клиентов:</span>
       </h1>
 
       <div class="lg:grid lg:grid-cols-4 lg:gap-[20px]">
@@ -39,12 +42,14 @@ const activateReview = (id: number) => {
             <div
               class="text-[16px] font-bold text-[#000] dark:text-[#fff] mb-[8px] leading-[normal] lg:text-[24px]"
             >
-              {{ review.name }}
+              <span v-if="locale === 'en'">{{ review.nameEn }}</span>
+              <span v-else-if="locale === 'ru'">{{ review.nameRu }}</span>
             </div>
             <div
               class="text-[10px] text-[#000] dark:text-[#fff] mb-[12px] font-medium lg:text-[16px] lg:mb-[16px]"
             >
-              {{ review.jobTitle }}
+              <span v-if="locale === 'en'">{{ review.jobTitleEn }}</span>
+              <span v-else-if="locale === 'ru'">{{ review.jobTitleRu }}</span>
             </div>
             <div
               class="text-[14px] text-[#000] dark:text-[#fff] mb-[12px] font-bold leading-[normal] lg:text-[16px]"
@@ -72,7 +77,8 @@ const activateReview = (id: number) => {
               <div
                 class="text-[20px] leading-[150%] lg:text-[36px] lg:font-bold"
               >
-                {{ review.text }}
+                <span v-if="locale === 'en'" v-html="review.textEn"></span>
+                <span v-else-if="locale === 'ru'" v-html="review.textRu"></span>
               </div>
             </div>
           </div>
