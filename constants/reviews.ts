@@ -15,7 +15,7 @@ interface IReviews {
 export const reviews: IReviews[] = [
   {
     id: 0,
-    image: '',
+    image: '🛡️',
     nameEn: 'Antifraud System',
     nameRu: 'Antifraud System',
     jobTitleEn: 'CTO, FinTech Company',
@@ -30,7 +30,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 1,
-    image: '',
+    image: '👁️',
     nameEn: 'Face-ID Platform – AI & Biometrics Provider',
     nameRu: 'Face-ID – Поставщик AI-решений',
     jobTitleEn: 'Head of ML, AI company',
@@ -45,7 +45,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 2,
-    image: '',
+    image: '📚',
     nameEn: 'Education Project',
     nameRu: 'EDU-платформа',
     jobTitleEn: 'CTO, EdTech company',
@@ -60,7 +60,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 3,
-    image: '',
+    image: '🧠',
     nameEn: 'RIITM',
     nameRu: 'RIITM',
     jobTitleEn: 'Head of IT Department',
@@ -75,7 +75,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 4,
-    image: '',
+    image: '💳',
     nameEn: 'Davrbank',
     nameRu: 'Davrbank',
     jobTitleEn: 'Lead DevOps Engineer',
@@ -90,7 +90,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 5,
-    image: '',
+    image: '🎬',
     nameEn: 'Episode',
     nameRu: 'Episode',
     jobTitleEn: 'Solution Architect, MediaTech Company',
@@ -105,7 +105,7 @@ export const reviews: IReviews[] = [
   },
   {
     id: 6,
-    image: '',
+    image: '🏦',
     nameEn: 'Mobile Banking Migration',
     nameRu: 'Финтех-проекты',
     jobTitleEn: 'IT Director of the Bank',

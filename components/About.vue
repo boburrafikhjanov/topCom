@@ -67,7 +67,10 @@ const { locale, t } = useI18n()
       </p>
 
       <div class="grid md:grid-cols-4 gap-[20px]">
-        <div class="text-[36px] col-span-1 font-bold">Numbers</div>
+        <div class="text-[36px] col-span-1 font-bold">
+          <span v-if="locale === 'en'">Numbers</span>
+          <span v-else-if="locale === 'ru'">Немного о нас в цифрах</span>
+        </div>
 
         <div class="col-span-3">
           <div
@@ -81,8 +84,12 @@ const { locale, t } = useI18n()
               <span class="text-[42px] mb-[20px] font-bold">{{
                 number.number
               }}</span>
-
-              <span class="text-[22px]">{{ number.description }}</span>
+              <span class="text-[22px]">
+                <span v-if="locale === 'en'">{{ number.description }}</span>
+                <span v-else-if="locale === 'ru'">{{
+                  number.descriptionRu
+                }}</span>
+              </span>
             </div>
           </div>
 
@@ -113,7 +120,8 @@ const { locale, t } = useI18n()
                   }}</span>
                 </div>
                 <div class="text-[24px]">
-                  {{ star.reviews }}
+                  <span v-if="locale === 'en'">{{ star.reviews }}</span>
+                  <span v-else-if="locale === 'ru'">{{ star.reviewsRu }}</span>
                 </div>
               </div>
             </div>

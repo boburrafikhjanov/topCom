@@ -35,9 +35,9 @@ const { locale } = useI18n()
             @click="activateReview(review.id)"
           >
             <div
-              class="w-[56px] h-[56px] rounded-[50%] mb-[16px] border-[1px] border-solid border-[#111111] lg:w-[100px] lg:h-[100px]"
+              class="flex items-center justify-center text-[60px] [w-[56px] h-[56px] rounded-[50%] mb-[16px] border-[1px] border-solid border-[#111111] lg:w-[100px] lg:h-[100px]"
             >
-              <img :src="review.image" alt="" />
+              {{ review.image }}
             </div>
             <div
               class="text-[16px] font-bold text-[#000] dark:text-[#fff] mb-[8px] leading-[normal] lg:text-[24px]"
@@ -59,7 +59,7 @@ const { locale } = useI18n()
           </div>
         </div>
 
-        <div class="lg:col-span-3">
+        <div class="lg:col-span-3 lg:pl-[20px]">
           <div v-for="review in reviews" :key="review.id">
             <div v-if="activeReviewId === review.id">
               <div class="flex items-center mb-[24px] lg:mb-[34px]">

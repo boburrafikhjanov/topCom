@@ -4,6 +4,7 @@ import logoWhite from 'assets/icons/logo-white.svg'
 import { menuFooter } from '~/constants/menuFooter'
 
 const color = useColorMode()
+const { locale } = useI18n()
 </script>
 
 <template>
@@ -27,12 +28,14 @@ const color = useColorMode()
 
         <div v-for="(menu, key) in menuFooter" :key="key" class="mb-[40px]">
           <div class="text-[#F53700] text-[24px] font-semibold mb-[30px]">
-            {{ menu.title }}
+            <span v-if="locale === 'en'">{{ menu.title }}</span>
+            <span v-else-if="locale === 'ru'">{{ menu.titleRu }}</span>
           </div>
           <ul>
             <li v-for="(item, i) in menu.menu" :key="i" class="mb-[16px]">
               <NuxtLink class="text-[16px] font-medium" :to="item.href">
-                {{ item.label }}
+                <span v-if="locale === 'en'">{{ item.label }}</span>
+                <span v-else-if="locale === 'ru'">{{ item.labelRu }}</span>
               </NuxtLink>
             </li>
           </ul>
